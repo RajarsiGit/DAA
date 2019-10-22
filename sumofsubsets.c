@@ -22,11 +22,22 @@ void find(int *a,int currsum,int index,int sum,int *sol,int N)
 	}
 	return;
 }
+
 int main()
 {
-	int a[]={10,5,7,12,13,4};
-	int N=sizeof(a)/sizeof(int);
-	int sol[N];
-	find(a,0,0,17,sol,N);
+	int *a,N,*sol,i,sum;
+	printf("\nEnter number of elements: ");
+	scanf("%d",&N);
+	
+	a=(int *) malloc(N*sizeof(int));
+	sol=(int *) malloc(N*sizeof(int));
+	
+	printf("\nEnter elements: ");
+	for(i=0;i<N;i++)
+	    scanf("%d",&a[i]);
+	    
+	printf("\nEnter sum: ");
+	scanf("%d",&sum);
+	find(a,0,0,sum,sol,N);
 	return 0;
 }
