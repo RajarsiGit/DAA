@@ -27,10 +27,10 @@ void print(int n)
         printf("\n\n%d",i);
         for(j=1;j<=n;++j)
         {
-        if(board[i]==j)
-            printf("\tQ");
-        else
-            printf("\t-");
+            if(board[i]==j)
+                printf("\tQ");
+            else
+                printf("\t-");
         }
     }
 }
