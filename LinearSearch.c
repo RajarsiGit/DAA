@@ -1,7 +1,6 @@
 #include<stdio.h>
-#define SIZE 10
+#define SIZE 5
 
-/* Returne index */
 int Linear_Search(int arr[SIZE], int num)
 {
 	int i;
@@ -17,18 +16,18 @@ int Linear_Search(int arr[SIZE], int num)
 int main()
 {
 	int arr[SIZE],i,num,flag;
+	printf("Enter elements: ");
 	for(i=0 ; i<SIZE ; i++)
-	{
-		printf("Enter %d no. : ",i+1);
-		scanf("%d",&arr[i]);	
-	}
+		scanf("%d",&arr[i]);
+		
 	printf("\nEnter search element : ");
 	scanf("%d",&num);
+	
 	flag=Linear_Search(arr,num);
+	
 	if(flag==-1)
 		printf("\nElement is not present in an array.");
 	else
 		printf("\nnumber ( %d ) is present at position %d ",num,++flag);
 	return 0;
-
 }
